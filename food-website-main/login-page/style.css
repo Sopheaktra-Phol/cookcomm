@@ -40,7 +40,7 @@ body {
 }
 
 .container a {
-    color: #333;
+    color: #ff8243;
     font-size: 13px;
     text-decoration: none;
     margin: 15px 0 10px;
@@ -134,7 +134,7 @@ body {
 
 .social-icons a {
     border: 1px solid #ccc;
-    border-radius: 20%;
+    border-radius: 50%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
