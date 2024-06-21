@@ -1,0 +1,4 @@
+[[redirects]]
+ from "/*"
+ to "/*indel.html" 
+ status = 200
