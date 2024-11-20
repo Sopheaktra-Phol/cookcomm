@@ -170,3 +170,8 @@ jQuery(window).on('load', function () {
 
     }
 });
+
+// Add this to your existing ScrollTrigger setup
+ScrollTrigger.config({
+    autoRefreshEvents: "visibilitychange,DOMContentLoaded,load,resize"
+});

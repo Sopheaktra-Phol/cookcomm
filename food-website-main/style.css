@@ -9,11 +9,11 @@ body {
 }
 
 .body-fixed {
-    position: fixed;
+    position: relative;
     width: 100%;
-    height: 100vh;
-    top: auto;
-    left: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 body, html {
@@ -424,11 +424,9 @@ ul {
         right: 0;
     }
     #js-scroll-content {
-        position: absolute;
-        overflow: hidden;
+        position: relative;
         width: 100%;
-        top: 0;
-        left: 0;
+        overflow: visible;
     }
 }
 
@@ -1371,6 +1369,7 @@ p {
     position: relative;
 }
 
+
 .footer-logo {
     margin-bottom: 30px;
 }
@@ -1848,4 +1847,44 @@ p {
     .blog-box {
         padding: 20px;
     }
+}
+
+/* Meal Search Styles */
+.meal-search {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.meal-search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.meal-result {
+    margin-top: 50px;
+}
+
+.meal-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 30px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 30px;
+    display: none;
+    z-index: 9999;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.showRecipe {
+    display: block;
 }

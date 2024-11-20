@@ -1,0 +1,96 @@
+/* Meal Search Styles */
+.search-wrapper {
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.search-container {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.search-container .form-input {
+    padding: 0.6rem 1rem;
+    font-size: 1.1rem;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    margin-right: 0.5rem;
+    width: 300px;
+    max-width: 100%;
+}
+
+.meal-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    display: none;
+    z-index: 9999;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.meal-details.showRecipe {
+    display: block;
+}
+
+.recipe-close-btn {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.recipe-close-btn:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.recipe-instruct {
+    padding: 1rem 0;
+}
+
+.recipe-instruct img {
+    width: 100%;
+    border-radius: 15px;
+    margin: 1.5rem 0;
+}
+
+.notFound {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: var(--primary-color);
+}
+
+/* Overlay when modal is open */
+.meal-details::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
