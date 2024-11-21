@@ -175,3 +175,29 @@ jQuery(window).on('load', function () {
 ScrollTrigger.config({
     autoRefreshEvents: "visibilitychange,DOMContentLoaded,load,resize"
 });
+
+const bannerImg = document.querySelector('.banner-img'); // Make sure the selector matches your HTML
+
+const images = [
+    'assets/images/bt1.jpg',
+    'assets/images/bt3.jpg',
+    'assets/images/bt2.jpg'
+];
+
+let currentIndex = 0;
+
+// Function to cycle images
+function cycleImages() {
+    if (bannerImg) {
+        bannerImg.style.backgroundImage = `url(${images[currentIndex]})`;
+        currentIndex = (currentIndex + 1) % images.length;
+    } else {
+        console.error('Banner image element not found');
+    }
+}
+
+// Start cycling images every 3 seconds
+setInterval(cycleImages, 3000);
+
+// Call the function once to display the first image immediately
+cycleImages();

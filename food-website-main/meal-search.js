@@ -29,8 +29,8 @@ function getMealList() {
                                 <div class="dist-bottom-row">
                                     <ul>
                                         <li>
-                                            <button class="dish-add-btn" onclick="getMealRecipe(${meal.idMeal})">
-                                                <i class="uil uil-search"></i>
+                                            <button class="see-recipe" onclick="getMealRecipe(${meal.idMeal})">
+                                                See Recipe
                                             </button>
                                         </li>
                                     </ul>
