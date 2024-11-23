@@ -49,6 +49,10 @@ function getMealList() {
                 `;
             }
             menuDish.innerHTML = html;
+            // Force a layout update after a short delay
+            setTimeout(() => {
+                window.dispatchEvent(new Event('resize')); // Trigger resize event
+            }, 100); // Adjust the delay as needed
         })
         .catch(error => {
             console.error('Error:', error);

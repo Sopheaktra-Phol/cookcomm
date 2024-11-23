@@ -16,8 +16,12 @@ body {
     overflow-y: auto;
 }
 
-body, html {
-    overflow-x: hidden;
+html, body {
+    height: auto; /* Allow height to adjust based on content */
+    margin: 0; /* Remove default margin */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; /* Allow vertical scrolling */
+    min-height: 100vh;
 }
 
 img {
@@ -427,6 +431,7 @@ ul {
         position: relative;
         width: 100%;
         overflow: visible;
+        overflow-y: auto;
     }
 }
 

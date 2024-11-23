@@ -7,6 +7,8 @@
 .search-container {
     text-align: center;
     margin: 1.5rem 0;
+    min-height: fit-content;
+    height: auto;
 }
 
 .search-container .form-input {
@@ -98,6 +100,12 @@
     z-index: -1;
 }
 
+#meal {
+    margin: 2rem 0;
+    min-height: fit-content;
+    height: auto;
+}
+
 .btn.btn-primary {
     background-color: #FF5733; 
     color: #fff; 
@@ -130,4 +138,3 @@
     background: #f3f3f5;
     box-shadow: inset 8px 8px 12px #e2e2e2, inset -8px -8px 12px #ffffff;
 }
-
