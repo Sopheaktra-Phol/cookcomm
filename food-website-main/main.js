@@ -201,3 +201,17 @@ setInterval(cycleImages, 3000);
 
 // Call the function once to display the first image immediately
 cycleImages();
+
+$(document).ready(function() {
+    // Smooth scrolling for navigation links
+    $('.header-menu a').on('click', function(event) {
+        event.preventDefault(); // Prevent default anchor click behavior
+        var target = $(this).attr('href'); // Get the target section ID
+        // Check if the target exists before scrolling
+        if ($(target).length) {
+            $('html, body').stop().animate({
+                scrollTop: $(target).offset().top // Animate scroll to the target section
+            }, 800); // Duration of the scroll animation in milliseconds
+        }
+    });
+});
