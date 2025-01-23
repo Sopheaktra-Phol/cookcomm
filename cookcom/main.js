@@ -215,3 +215,42 @@ $(document).ready(function() {
         }
     });
 });
+// Function to handle logout with fade-out effect
+function handleLogout(event) {
+    event.preventDefault(); // Prevent default link behavior
+
+    // Add fade-out class to the body
+    document.body.classList.add('fade-out');
+
+    // Wait for the transition to complete before redirecting
+    setTimeout(() => {
+        window.location.href = 'login-page/index.html'; // Redirect to login page
+    }, 500); // Match the timeout duration with the CSS transition duration
+}
+
+// Update the logout link to call the handleLogout function
+document.querySelector('.dropdown-menu li:last-child a').addEventListener('click', handleLogout);
+document.getElementById('user-button').addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent click event from bubbling up
+    const menu = document.getElementById('dropdown-menu');
+    const userButton = document.getElementById('user-button');
+    
+    // Toggle the dropdown visibility
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none'; // Hide dropdown
+        userButton.classList.remove('show-hamburger'); // Show user icon
+    } else {
+        menu.style.display = 'block'; // Show dropdown
+        userButton.classList.add('show-hamburger'); // Show hamburger icon
+    }
+});
+
+// Optional: Close the menu when clicking outside
+document.addEventListener('click', function(event) {
+    const menu = document.getElementById('dropdown-menu');
+    const userButton = document.getElementById('user-button');
+    if (!userButton.contains(event.target) && !menu.contains(event.target)) {
+        menu.style.display = 'none'; // Close the menu
+        userButton.classList.remove('show-hamburger'); // Show user icon
+    }
+});

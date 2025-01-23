@@ -28,6 +28,11 @@ function getMealList() {
                                 </div>
                                 <div class="dist-bottom-row">
                                     <ul>
+                                     <li>
+                                        <button class="add-to-cart" onclick="addToCart(${meal.idMeal})">
+                                            <i class="fas fa-plus"></i> <!-- Font Awesome Plus Icon -->
+                                        </button>
+                                    </li>
                                         <li>
                                             <button class="see-recipe" onclick="getMealRecipe(${meal.idMeal})">
                                                 See Recipe
@@ -52,7 +57,7 @@ function getMealList() {
             // Force a layout update after a short delay
             setTimeout(() => {
                 window.dispatchEvent(new Event('resize')); // Trigger resize event
-            }, 100); // Adjust the delay as needed
+            }, 300); // Adjust the delay as needed
         })
         .catch(error => {
             console.error('Error:', error);

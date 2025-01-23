@@ -53,13 +53,26 @@
                                     <i class="uil uil-search"></i>
                                 </button>
                             </form>
-                            <a href="javascript:void(0)" class="header-btn header-cart">
+                            <a href="cart-items/cart-recipe.html" class="header-btn header-cart">
                                 <i class="uil uil-shopping-bag"></i>
                                 <span class="cart-number">0</span>
                             </a>
-                            <a href="login-page/index.html" class="header-btn">
-                                <i class="uil uil-user-md"></i>
+                            <a href="javascript:void(0)" class="header-btn" id="user-button">
+                                <div class="hamburger" id="hamburger-icon">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <i class="uil uil-user-md" id="user-icon"></i>
                             </a>
+                            <!-- Dropdown Menu -->
+                            <div class="dropdown-menu" id="dropdown-menu">
+                                <ul>
+                                    <li><a href="#profile">Profile</a></li>
+                                    <li><a href="#settings">Settings</a></li>
+                                    <li><a href="#" id="logout-link">Log out</a></li> <!-- Update this line -->
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -485,6 +498,7 @@
     <!-- custom js  -->
     <script src="main.js"></script>
     <script src="meal-search.js"></script>
+    <script src="cart-items/cart-quantity.js"></script>
 
     <!-- Recipe Modal -->
     <div class="meal-details">

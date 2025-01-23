@@ -1,0 +1,117 @@
+/* cart-recipe.css */
+
+/* General styles for the cart items */
+#cart-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.dish-box {
+    margin: 10px; /* Space between cards */
+}
+
+.dish {
+    background-color: #fff; /* White background for the card */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    text-align: center; /* Center text */
+    overflow: hidden; /* Hide overflow */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.dish:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.dish-img img {
+    width: 100%; /* Full width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px 15px 0 0; /* Rounded top corners */
+}
+
+.dish-title {
+    padding: 15px; /* Padding for the text */
+}
+
+.dish-title h3 {
+    font-size: 1.2rem; /* Font size for the meal name */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+.dish-bottom-row {
+    padding: 15px; /* Padding for the buttons */
+}
+
+/* Styles for the recipe modal */
+.recipe-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    display: none; /* Initially hidden */
+    z-index: 9999;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-modal.showRecipe {
+    display: block; /* Show when active */
+}
+
+.recipe-close-btn {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.recipe-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.recipe-category {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.recipe-instruct {
+    margin: 1rem 0;
+}
+
+.recipe-meal-img img {
+    width: 100%;
+    border-radius: 15px;
+    margin: 1rem 0;
+}
+
+.recipe-link {
+    margin-top: 1rem;
+}
+
+.btn.btn-primary {
+    background-color: #FF5733; 
+    color: #fff; 
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+    background-color: #C13C1A; 
+}

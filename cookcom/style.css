@@ -42,12 +42,80 @@ img {
 }
 
 .site-header.sticky_head {
-    background: rgb(255 255 255 / 80%);
+    background: #ffffffcc;
     padding: 20px 0;
     border-color: #f2f2f2;
     backdrop-filter: blur(20px);
 }
 
+/* Add this to your CSS file */
+.dropdown-menu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 50px; /* Align with other nav items */
+    right: 0; /* Align to the right of the user button */
+    background-color: #fff; /* Match your website's background */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+    z-index: 1000; /* Ensure it appears above other elements */
+    border-radius: 5px; /* Optional: rounded corners */
+    min-width: 150px; /* Set a minimum width for the dropdown */
+}
+
+/* Style for the dropdown menu items */
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.dropdown-menu li {
+    padding: 12px 15px; /* Adjust padding for better spacing */
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #0d0d25; /* Match the text color to your theme */
+    font-family: 'Poppins', sans-serif; /* Use the same font family as the rest of the site */
+    font-size: 16px; /* Match font size */
+    font-weight: 500; /* Match font weight */
+    display: block; /* Make the entire area clickable */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect to match .main-navigation */
+.dropdown-menu li:hover {
+    background-color: #f3f3f5; /* Light gray background on hover */
+    color: #ff8243; /* Change text color on hover to match theme */
+    box-shadow: inset 8px 8px 12px #e2e2e2, inset -8px -8px 12px #ffffff; /* Match the box shadow effect */
+}
+
+/* Hamburger icon styles */
+.hamburger {
+    display: none; /* Initially hidden */
+    flex-direction: column; /* Stack the lines */
+}
+
+.hamburger div {
+    width: 25px; /* Width of the hamburger lines */
+    height: 3px; /* Height of the hamburger lines */
+    background-color: #333; /* Color of the hamburger lines */
+    margin: 3px 0; /* Space between lines */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Show hamburger icon when active */
+.show-hamburger .hamburger {
+    display: flex; /* Show hamburger icon */
+}
+
+.show-hamburger #user-icon {
+    display: none; /* Hide user icon when hamburger is shown */
+}
+/* Add this to your CSS file */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Adjust duration and easing as needed */
+}
 .main-navigation {
     display: flex;
     width: 100%;

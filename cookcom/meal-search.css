@@ -119,7 +119,7 @@
     cursor: pointer; 
 }
 
-.see-recipe {
+.see-recipe, .add-to-cart {
     background-color: transparent; /* Remove yellow background */
     color: #0d0d25;    
     border: 1px solid #ddd; /* Optional: Add a border */
@@ -133,7 +133,7 @@
     border-radius: 30px;
 }
 
-.see-recipe:hover {
+.see-recipe:hover, .add-to-cart:hover {
     color: #ff8243;
     background: #f3f3f5;
     box-shadow: inset 8px 8px 12px #e2e2e2, inset -8px -8px 12px #ffffff;
