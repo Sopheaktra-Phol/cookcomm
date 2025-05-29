@@ -28,16 +28,16 @@ function getMealList() {
                                 </div>
                                 <div class="dist-bottom-row">
                                     <ul>
+                                    <li>
+                                            <button class="see-recipe" onclick="getMealRecipe(${meal.idMeal})">
+                                                See Recipe
+                                            </button>
+                                        </li>
                                      <li>
                                         <button class="add-to-cart" onclick="addToCart(${meal.idMeal})">
                                             <i class="fas fa-plus"></i> <!-- Font Awesome Plus Icon -->
                                         </button>
                                     </li>
-                                        <li>
-                                            <button class="see-recipe" onclick="getMealRecipe(${meal.idMeal})">
-                                                See Recipe
-                                            </button>
-                                        </li>
                                     </ul>
                                 </div>
                             </div>

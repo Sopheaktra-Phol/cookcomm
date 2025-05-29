@@ -33,15 +33,17 @@ function displayCartItems() {
                             <div class="dish-bottom-row">
                                 <ul>
                                     <li>
-                                        <button class="remove-from-cart" onclick="removeFromCart(${meal.idMeal})">
-                                            Remove from Cart
-                                        </button>
-                                    </li>
-                                    <li>
                                         <button class="see-recipe" onclick="getMealRecipe(${meal.idMeal})">
                                             See Recipe
                                         </button>
                                     </li>
+                                    <li>
+                                        <button class="remove-from-cart" onclick="removeFromCart('${meal.idMeal}')">
+                                             Remove from Cart
+                                        </button>
+
+                                    </li>
+
                                 </ul>
                             </div>
                         </div>
@@ -108,9 +110,12 @@ function closeRecipe() {
 // Function to remove an item from the cart
 function removeFromCart(mealId) {
     let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-    cartItems = cartItems.filter(id => id !== mealId); // Remove the item
-    localStorage.setItem('cartItems', JSON.stringify(cartItems)); // Update local storage
-    displayCartItems(); // Refresh the cart display
+    console.log('cartItems:', cartItems, 'mealId:', mealId, 'mealId type:', typeof mealId);
+
+    // Try filtering with both types (string and number)
+    cartItems = cartItems.filter(id => id != mealId); // loose inequality for type coercion
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    displayCartItems();
 }
 
 // Call the function to display cart items on page load

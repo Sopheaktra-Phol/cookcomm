@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="user-dashboard-style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="user-dashboard.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="nav-icons">
+                <div class="icon active"></div>
+                <div class="icon"></div>
+                <div class="icon"></div>
+                <div class="icon"></div>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div>
+                    <a href="../index.html" class="back-btn">
+                        <img src="back-btn.png" alt="back">
+                    </a>
+                    <h2>Welcome, Sopheaktra</h2>
+                    <p>Tue, 07 June 2025</p>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search Here...">
+                    <button type="submit">
+                        <i class="uil uil-search"></i>
+                    </button>
+                    <div class="search-icons">
+                        <span class="icon"></span>
+                        <span class="icon"></span>
+                        <span class="icon"></span>
+                    </div>
+                </div>
+            </header>
+            <section class="profile-section">
+                <div class="profile-header">
+                    <img src="cat pfp.jpg" alt="User Avatar" class="avatar">
+                    <div>
+                        <h3>Sopheaktra Phol</h3>
+                        <p>sopheaktranexusphol@gmail.com</p>
+                    </div>
+                    <button class="edit-btn">Edit</button>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="fullName" placeholder="Your First Name">
+                    </div>
+                    <div class="form-group">
+                        <label>Nick Name</label>
+                        <input type="text" id="nickName" placeholder="Your First Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender">
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="none">Prefer Not To Say</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <input type="text" id="country" placeholder="Your Country">
+                    </div>
+                    <div class="form-group">
+                        <label for="language">Language</label>
+                        <select id="language">
+                            <option value="">Select Language</option>
+                            <option value="en">English</option>
+                            <option value="kh">Khmer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="text" id="phoneNumber" placeholder="Your Phone Number">
+                    </div>
+                </div>
+                <div class="email-section">
+                    <p><strong>My email Address</strong></p>
+                    <div class="email-box">
+                        <span class="email-icon"></span>
+                        <span>sopheaktranexusphol@gmail.com</span>
+                        <span class="email-time">1 month ago</span>
+                    </div>
+                    <button class="add-email">+ Add Email Address</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
